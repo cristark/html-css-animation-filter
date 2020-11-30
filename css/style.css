@@ -1,7 +1,9 @@
+/* GENERAL */
 [class*="ex-"] {
   cursor: pointer;
 }
 
+/* ESERCIZIO 1 */
 .ex-1-square {
   width: 100px;
   height: 100px;
@@ -14,6 +16,7 @@
   background-color: red;
 }
 
+/* ESERCIZIO 2 */
 .ex-2-square {
   width: 100px;
   height: 100px;
@@ -26,6 +29,7 @@
   width: 100%;
 }
 
+/* ESERCIZIO 3 */
 .ex-3-square {
   width: 100px;
   height: 100px;
@@ -38,17 +42,37 @@
   border-radius: 50%;
 }
 
+/* ESERCIZIO 4 */
 .ex-4-square {
   width: 100px;
   height: 100px;
   background: red;
+  transition: all 1s linear;
 }
+
+/* Effetto */
+.ex-4-square:hover {
+  opacity: 0;
+}
+
+/* ESERCIZIO 5 */
 .ex-5-square {
   margin: 20px;
   width: 60px;
   height: 60px;
   background: red;
+  transition: all 1s;
 }
+
+/* Effetto */
+.ex-5-square:hover {
+  transform: scale(2);
+}
+
+.ex-5-square:active {
+  transform: scale(0.5);
+}
+
 .ex-6-img,
 .ex-7-img,
 .ex-8-img {
