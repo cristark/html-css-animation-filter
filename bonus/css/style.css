@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scenario {
+  width: 50%;
+  height: 550px;
+  background-image: url(../img/scenario.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: relative;
+}
+
+@keyframes scenario {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.car {
+  position: absolute;
+  bottom: 160px;
+  left: -250px;
+  animation: carAppear 2s ease-out 2s;
+  animation-fill-mode: forwards;
+}
+
+.mclaren1 {
+  position: absolute;
+}
+
+.rear_wheel {
+  position: absolute;
+  bottom: 30px;
+  left: 38px;
+  animation: rearWheelRotateStart 1.4s ease-out 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.front_wheel {
+  position: absolute;
+  bottom: 29px;
+  left: 166px;
+  animation: frontWheelRotateStart 1.4s ease-in-out 0.9s 2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes carAppear {
+  from {
+    bottom: 160px;
+    left: -250px;
+  }
+
+  to {
+    bottom: 160px;
+    left: 50px;
+  }
+}
+
+@keyframes rearWheelRotateStart {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes frontWheelRotateStart {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dash {
+  width: 50%;
+  height: 400px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.throttle {
+  width: 300px;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+
+.gas_pedal {
+  height: 100%;
+  cursor: pointer;
+  float: left;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.gas {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  margin-left: 20px;
+}
+
+.speedo {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+.speedo_numb {
+  height: 100%;
+}
+
+.scenario:active {
+  animation: startScrolling 15s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes startScrolling {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.scenario:active .rear_wheel {
+  animation: rearWheelFullRotation 0.5s linear 30;
+}
+
+@keyframes rearWheelFullRotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scenario:active .front_wheel {
+  animation: frontWheelFullRotation 0.5s linear 30;
+}
+
+@keyframes frontWheelFullRotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.speedo_lanc {
+  height: 100%;
+  position: absolute;
+  top: 6px;
+  left: -3px;
+  transform: rotate(33deg);
+}
+
+.scenario:active .speedo_lanc {
+  animation: speed 15s linear;
+}
+
+@keyframes speed {
+  from {
+    transform: rotate(33deg);
+  }
+
+  to {
+    transform: rotate(268deg);
+  }
+}
+
+.scenario:active .gas {
+  animation: throttleGoUp 0.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes throttleGoUp {
+  from {
+    height: 20px;
+  }
+
+  to {
+    height: 140px;
+  }
+}
