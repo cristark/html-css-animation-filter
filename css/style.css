@@ -235,11 +235,11 @@
 
 /* ESERCIZIO 13 */
 .ex-13-button:hover .ex-13-top-white {
-  animation: slide_top 2s linear;
+  animation: slide13_top 2s linear;
 }
 
 /* Effetto */
-@keyframes slide_top {
+@keyframes slide13_top {
   0% {
     top: -10px;
     left: 10%;
@@ -272,10 +272,10 @@
 }
 
 .ex-13-button:hover .ex-13-bottom-white {
-  animation: slide_bottom 2s linear;
+  animation: slide13_bottom 2s linear;
 }
 
-@keyframes slide_bottom {
+@keyframes slide13_bottom {
   0% {
     bottom: -10px;
     right: 20%;
