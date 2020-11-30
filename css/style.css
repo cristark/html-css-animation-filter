@@ -107,16 +107,61 @@
   filter: saturate(25%);
 }
 
+/* ESECIZIO 9 */
 .ex-9-img {
   margin: 50px 100px;
   width: 400px;
+  transition: all 1.5s ease-in-out;
 }
+
+/* Effetto */
+.ex-9-img:hover {
+  border-radius: 20px;
+  transform: scale(1.5);
+  filter: grayscale(100%);
+  filter: sepia(65%);
+}
+
+/* ESERCIZIO 10 */
 .ex-10-icon {
   font-size: 60px;
+  animation: rotate 1s infinite linear reverse;
 }
+
+/* Effetto */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ESERCIZIO 11 */
 .ex-11-icon {
   font-size: 60px;
 }
+
+/* Effetto */
+.ex-11-icon:hover {
+  animation: return 2s linear;
+}
+
+@keyframes return {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  85% {
+    transform: rotate(295deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .ex-12-button,
 .ex-13-button {
   position: relative;
@@ -148,4 +193,42 @@
   background: #f5f5f5;
   width: 60px;
   height: 20px;
+}
+
+/* ESERCIZIO 12 */
+.ex-12-button:hover .ex-12-top-white {
+  animation: slide_top 2s linear;
+}
+
+/* Effetto */
+@keyframes slide_top {
+  0% {
+    left: 10%;
+  }
+
+  50% {
+    left: 65%;
+  }
+
+  100% {
+    left: 10%;
+  }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+  animation: slide_bottom 2s linear;
+}
+
+@keyframes slide_bottom {
+  0% {
+    right: 20%;
+  }
+
+  50% {
+    right: 65%;
+  }
+
+  100% {
+    right: 20%;
+  }
 }
