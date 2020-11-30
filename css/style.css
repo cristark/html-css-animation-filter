@@ -79,6 +79,34 @@
   width: 500px;
 }
 
+/* ESERCIZIO 6 */
+.ex-6-img:hover {
+  filter: grayscale(100%);
+}
+
+/* ESERCIZIO 7 */
+.ex-7-img {
+  transition: all 1s linear;
+}
+
+/* Effetto */
+.ex-7-img:hover {
+  filter: grayscale(80%);
+  filter: sepia(50%);
+}
+
+/* ESERCIZIO 8 */
+.ex-8-img {
+  transition: all 1s ease-in-out;
+}
+
+/* Effetto */
+.ex-8-img:hover {
+  border-radius: 20px;
+  filter: grayscale(100%);
+  filter: saturate(25%);
+}
+
 .ex-9-img {
   margin: 50px 100px;
   width: 400px;
